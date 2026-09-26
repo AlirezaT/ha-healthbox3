@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.4-beta.1] - 2026-09-27
+
+### Fixed
+
+- API-key setup, reconfiguration, and reauthentication now distinguish
+  connection failures and unexpected responses from an actual rejected key.
+- Key activation accepts successful plain-text or empty acknowledgements
+  and checks status up to six times, two seconds apart, to allow activation
+  to finish without repeatedly uploading the key.
+- Device requests run one at a time per client, reducing bursts of room
+  requests. Failed reads are retried once after one second; writes are
+  never replayed, avoiding unintended boost timer restarts. A complete poll
+  is limited to 60 seconds so losing the device mid-poll cannot leave a long
+  queue of room requests waiting to time out.
+
+### Notes
+
+- First test release of the AlirezaT fork, based on upstream 0.3.3.
+  Persistent network/device failures are still reported as unavailable.
+  Long-term stability needs validation on the affected installation.
+
 ## [0.3.3] - 2026-07-14
 
 ### Added
@@ -227,7 +248,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   every push and pull request.
 - README "Use cases", "Examples", and "Troubleshooting" sections.
 
-[Unreleased]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.3...HEAD
+[Unreleased]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.1...HEAD
 [0.3.3]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.2...0.3.3
 [0.3.2]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.0...0.3.1
@@ -238,3 +259,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.1.2]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/TrojanHorsePower/ha-healthbox3/releases/tag/0.1.0
+
+[0.3.4-beta.1]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.3...0.3.4-beta.1

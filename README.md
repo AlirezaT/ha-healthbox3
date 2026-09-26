@@ -1,5 +1,19 @@
 # Renson Healthbox 3 for Home Assistant
 
+> **Stability fork:** This repository is a fork of
+> [TrojanHorsePower/ha-healthbox3](https://github.com/TrojanHorsePower/ha-healthbox3).
+> `0.3.4-beta.1` fixes misleading API-key errors, accepts non-JSON activation
+> acknowledgements, and allows ten seconds of status polling delays for key
+> activation. Device requests are serialized per client; a failed read is
+> retried once after one second. Writes are never automatically replayed.
+> These changes mitigate brief connection failures; persistent device/network
+> outages still correctly make affected entities unavailable. Long-term
+> reliability on real hardware remains to be confirmed.
+>
+> For installation and migration from the upstream integration, see
+> [FORK.md](FORK.md). The default HACS listing below refers to upstream.
+
+
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![GitHub Release](https://img.shields.io/github/release/TrojanHorsePower/ha-healthbox3.svg)](https://github.com/TrojanHorsePower/ha-healthbox3/releases)
 [![License](https://img.shields.io/github/license/TrojanHorsePower/ha-healthbox3.svg)](LICENSE)
@@ -175,7 +189,9 @@ API key from Renson:
 3. When you receive the key, paste it into the "API key" field during setup
    (or via Reconfigure/Reauthenticate if you're adding it later), and the
    integration will activate it with the device and verify it before
-   saving - if activation fails, you'll see an error and can retry.
+   saving - if activation fails, you'll see an error and can retry. Connection
+   failures are shown separately from rejected keys; unexpected response formats
+   show an unexpected-error message.
 
 **Already activated the key yourself** (e.g. by POSTing it to
 `/v2/api/api_key` directly, per Renson's docs, before installing this
