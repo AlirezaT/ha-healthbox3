@@ -2,9 +2,9 @@
 
 > **Stability fork:** This repository is a fork of
 > [TrojanHorsePower/ha-healthbox3](https://github.com/TrojanHorsePower/ha-healthbox3).
-> `0.3.4-beta.1` fixes misleading API-key errors, accepts non-JSON activation
-> acknowledgements, and allows ten seconds of status polling delays for key
-> activation. Device requests are serialized per client; a failed read is
+> `0.3.4-beta.2` adds a 20-minute boost preset. It includes the beta.1 fixes
+> for misleading API-key errors, non-JSON activation acknowledgements, and
+> delayed key activation. Device requests are serialized per client; a failed read is
 > retried once after one second. Writes are never automatically replayed.
 > These changes mitigate brief connection failures; persistent device/network
 > outages still correctly make affected entities unavailable. Long-term
@@ -268,7 +268,7 @@ attribute on the entity, so you can see what the device actually received
 even though the slider itself reads a clean 0-100.
 
 **Duration is a preset picker**, not exact minutes: `5 min`, `10 min`,
-`15 min`, `30 min`, `45 min`, `1 hour`, `2 hours`, `4 hours` - a fixed list,
+`15 min`, `20 min`, `30 min`, `45 min`, `1 hour`, `2 hours`, `4 hours` - a fixed list,
 not an arbitrary custom duration (5 minutes is also the shortest boost
 Renson's own app offers). Pick one from the fan's preset dropdown; it's
 converted to the device's native seconds-based timeout at the boundary.

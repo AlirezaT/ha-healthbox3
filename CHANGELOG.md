@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.4-beta.2] - 2026-09-27
+
+### Added
+
+- A 20-minute boost preset, allowing existing 20-minute automations to use
+  the fan controls without changing duration or relying on a Home Assistant
+  timer to stop ventilation boost.
+
 ## [0.3.4-beta.1] - 2026-09-27
 
 ### Fixed
@@ -248,7 +256,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   every push and pull request.
 - README "Use cases", "Examples", and "Troubleshooting" sections.
 
-[Unreleased]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.1...HEAD
+[Unreleased]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.2...HEAD
 [0.3.3]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.2...0.3.3
 [0.3.2]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.0...0.3.1
@@ -261,3 +269,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.1.0]: https://github.com/TrojanHorsePower/ha-healthbox3/releases/tag/0.1.0
 
 [0.3.4-beta.1]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.3...0.3.4-beta.1
+
+[0.3.4-beta.2]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.1...0.3.4-beta.2
