@@ -8,16 +8,15 @@ its entities and automations are not automatically migrated by this fork.
 ## Manual replacement of an existing healthbox3 installation
 
 1. Back up Home Assistant, including `config/custom_components/healthbox3`.
-2. Download the `0.3.4-beta.2` release archive from this repository.
+2. Download the `0.3.4` release archive from this repository.
 3. Replace `config/custom_components/healthbox3` with that folder from the
    archive. Do not delete your Healthbox entry in Devices & services.
 4. Restart Home Assistant and check that the integration reports
-   `0.3.4-beta.2`. Existing configuration, entities, and history are retained.
-5. Avoid an upstream HACS update while testing: it would overwrite this fork.
+   `0.3.4`. Existing configuration, entities, and history are retained.
+5. Keep HACS pointed at this fork; an upstream update would overwrite it.
 
 For a fresh HACS installation, add `https://github.com/AlirezaT/ha-healthbox3`
-as an Integration custom repository and enable pre-release versions for
-this repository. Select `0.3.4-beta.2`. HACS may already track the upstream
+as an Integration custom repository and select stable release `0.3.4`. HACS may already track the upstream
 repository for the same domain; use the manual replacement above for an
 initial trial rather than installing duplicate integrations.
 

@@ -2,7 +2,7 @@
 
 > **Stability fork:** This repository is a fork of
 > [TrojanHorsePower/ha-healthbox3](https://github.com/TrojanHorsePower/ha-healthbox3).
-> `0.3.4-beta.2` adds a 20-minute boost preset. It includes the beta.1 fixes
+> Stable release `0.3.4` includes a 20-minute boost preset and fixes
 > for misleading API-key errors, non-JSON activation acknowledgements, and
 > delayed key activation. Device requests are serialized per client; a failed read is
 > retried once after one second. Writes are never automatically replayed.
@@ -15,13 +15,13 @@
 
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-[![GitHub Release](https://img.shields.io/github/release/TrojanHorsePower/ha-healthbox3.svg)](https://github.com/TrojanHorsePower/ha-healthbox3/releases)
-[![License](https://img.shields.io/github/license/TrojanHorsePower/ha-healthbox3.svg)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/release/AlirezaT/ha-healthbox3.svg)](https://github.com/AlirezaT/ha-healthbox3/releases)
+[![License](https://img.shields.io/github/license/AlirezaT/ha-healthbox3.svg)](LICENSE)
 [![HA Quality Scale](https://img.shields.io/badge/HA%20Quality%20Scale-Platinum-9c6ade.svg)](custom_components/healthbox3/quality_scale.yaml)
-[![CI](https://img.shields.io/github/actions/workflow/status/TrojanHorsePower/ha-healthbox3/ci.yml?label=CI)](https://github.com/TrojanHorsePower/ha-healthbox3/actions/workflows/ci.yml)
-[![HACS Validate](https://img.shields.io/github/actions/workflow/status/TrojanHorsePower/ha-healthbox3/hacs.yml?label=HACS%20Validate)](https://github.com/TrojanHorsePower/ha-healthbox3/actions/workflows/hacs.yml)
-[![hassfest](https://img.shields.io/github/actions/workflow/status/TrojanHorsePower/ha-healthbox3/hassfest.yml?label=hassfest)](https://github.com/TrojanHorsePower/ha-healthbox3/actions/workflows/hassfest.yml)
-[![mypy](https://img.shields.io/github/actions/workflow/status/TrojanHorsePower/ha-healthbox3/mypy.yml?label=mypy)](https://github.com/TrojanHorsePower/ha-healthbox3/actions/workflows/mypy.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/AlirezaT/ha-healthbox3/ci.yml?label=CI)](https://github.com/AlirezaT/ha-healthbox3/actions/workflows/ci.yml)
+[![HACS Validate](https://img.shields.io/github/actions/workflow/status/AlirezaT/ha-healthbox3/hacs.yml?label=HACS%20Validate)](https://github.com/AlirezaT/ha-healthbox3/actions/workflows/hacs.yml)
+[![hassfest](https://img.shields.io/github/actions/workflow/status/AlirezaT/ha-healthbox3/hassfest.yml?label=hassfest)](https://github.com/AlirezaT/ha-healthbox3/actions/workflows/hassfest.yml)
+[![mypy](https://img.shields.io/github/actions/workflow/status/AlirezaT/ha-healthbox3/mypy.yml?label=mypy)](https://github.com/AlirezaT/ha-healthbox3/actions/workflows/mypy.yml)
 
 A custom Home Assistant integration for the [Renson Healthbox
 3](https://renson.net/gd-gb/products/ventilation/healthbox), a whole-house

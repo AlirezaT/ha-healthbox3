@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.4] - 2026-09-29
+
+### Fixed
+
+- API-key setup, reconfiguration, and reauthentication distinguish connection
+  failures and unexpected responses from rejected keys.
+- Key activation accepts successful plain-text or empty acknowledgements and
+  allows delayed activation by checking status up to six times, two seconds apart.
+- Device requests run one at a time per client. Failed reads are retried once
+  after one second; writes are never replayed. Complete polls are limited to
+  60 seconds so a device disappearing mid-update cannot leave a long request queue.
+
+### Added
+
+- A 20-minute boost preset, with the countdown managed by the Healthbox itself.
+
+### Notes
+
+- Stable release of the runtime code tested in 0.3.4-beta.2; configuration and
+  entity identifiers are preserved.
+- Persistent device or network failures are still reported as unavailable.
+- Restart Home Assistant after updating.
+
 ## [0.3.4-beta.2] - 2026-09-27
 
 ### Added
@@ -256,7 +279,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   every push and pull request.
 - README "Use cases", "Examples", and "Troubleshooting" sections.
 
-[Unreleased]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.2...HEAD
+[Unreleased]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4...HEAD
 [0.3.3]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.2...0.3.3
 [0.3.2]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/TrojanHorsePower/ha-healthbox3/compare/0.3.0...0.3.1
@@ -271,3 +294,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.3.4-beta.1]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.3...0.3.4-beta.1
 
 [0.3.4-beta.2]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.1...0.3.4-beta.2
+
+[0.3.4]: https://github.com/AlirezaT/ha-healthbox3/compare/0.3.4-beta.2...0.3.4
